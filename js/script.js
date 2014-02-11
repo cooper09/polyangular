@@ -60,8 +60,7 @@ function DataCtrl($scope, $http) {
             $scope.data = data;
             $scope.status = status;
         }).
-          error(function(data, status, err) {
-            alert("oh oh: " + err);
+          error(function(data, status) {
             $scope.data = data || " Delete Request failed";
             $scope.status = status;
         });
