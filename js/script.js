@@ -17,7 +17,7 @@ function Ctrl($scope) {
 
 
 function DataCtrl($scope, $http) {
-   $scope.myData = 'Raw Data';
+   $scope.newTask = 'New Task';
 
    $scope.code = null;
    $scope.response = null;
@@ -36,18 +36,17 @@ function DataCtrl($scope, $http) {
    
    
     $scope.getData = function() {
-        alert("get data: "+ $scope.data[0].task );
+       // alert("get data: "+ $scope.data[0].task );
       }
       
       $scope.putData = function(taskname) {
         alert("put data: " +  taskname);
-        var $sip = taskname;
+        $scope.newTask = '';
 
           $http.jsonp("http://sonyainc.net/json/put_item.php?task="+taskname+"&format=jsonp&callback=JSON_CALLBACK").success(function(data, status) {
             $scope.data = data;
             $scope.status = status;
 
-            alert("add this bad boy: "+ $scope.data );
         }).
           error(function(data, status) {
             $scope.data = data || " Delete Request failed";
@@ -57,13 +56,9 @@ function DataCtrl($scope, $http) {
 
 
       $scope.deleteData = function(taskId) {
-            alert("delete data: " + taskId );
-
           $http.jsonp('http://sonyainc.net/json/delete_item.php?taskid='+taskId +'&format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
             $scope.data = data;
             $scope.status = status;
-
-            alert("delete this bad boy: "+ $scope.data );
         }).
           error(function(data, status, err) {
             alert("oh oh: " + err);

@@ -20,6 +20,9 @@
          <li ng-repeat="task in data">  
             <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span>
         </li>
+      <br/>
+      <input type="text" ng-model='newTask'>
+        <button id="addbtn" ng-click="putData(newTask)">Add</button><br>
 
       <br>
       <button id="getbtn" ng-click="getData(12)">get</button>
