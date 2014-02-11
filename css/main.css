@@ -1,0 +1,11 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+
+body {
+
+	padding-left: 1em;
+}
+
+.done-true {
+	text-decoration: line-through;
+	color: gray;
+}
