@@ -3,6 +3,7 @@
   <head>
     <script src="http://code.angularjs.org/1.2.11/angular.min.js"></script>
     <script src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
     <h3>PolyAngular - Todo</h3>
@@ -12,14 +13,14 @@
    <!-- datacontroller for controlling crud functions -->
    <div ng-controller="DataCtrl">
 
+        <p>Total Todos: {{total}}<p>
 
          <li ng-repeat="task in data">  
             <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span>
         </li>
       <br/>
-      <input type="text" ng-model='newTask'>
+      <input type="text" ng-model='newTask' class="input"><br/>
         <button id="addbtn" ng-click="putData(newTask)">Add</button><br>
-
       <br>
   
    </div><!-- end DataCtrl -->

@@ -27,7 +27,7 @@ function DataCtrl($scope, $http) {
         $scope.data = data;
         $scope.status = status;
 
-       // alert("what have we got: "+ $scope.data );
+        $scope.total = data.length;
     }).
       error(function(data, status) {
         $scope.data = data || "Request failed";

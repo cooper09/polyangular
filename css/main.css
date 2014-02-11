@@ -1,7 +1,6 @@
 /* Will be compiled down to a single stylesheet with your sass files */
 
 body {
-
 	padding-left: 1em;
 }
 
@@ -9,3 +8,25 @@ body {
 	text-decoration: line-through;
 	color: gray;
 }
+
+.input {
+	width: 20em;
+	height: 1.5em;
+	background: pink;
+	font-size: 1.5em;
+ }
+
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+ 	.input {
+	 	height: 3em;
+	 	font-size: 3em;
+	 	background: aqua;
+	 	width: 30em;
+	 }
+
+	 #addbtn {
+	 	height: 5em;
+	 	width: 10em;
+	 	font-size: 3em;
+	 }
+}/*end media query */
