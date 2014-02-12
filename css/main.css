@@ -16,6 +16,27 @@ body {
 	font-size: 1.5em;
  }
 
+ /* --- 
+ .strike {
+	  text-decoration: line-through;
+	}
+	.bold {
+	    font-weight: bold;
+	}
+	.red {
+	    color: red;
+	} */
+
+	.active {
+	    background-color: gray;
+	    color: white;
+	    text-decoration: line-through;
+		}
+		.inactive {
+		    color: black;
+		}
+	}
+/*----- begin media queries -----*/
  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
  	.input {
 	 	height: 3em;

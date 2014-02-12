@@ -16,11 +16,15 @@
         <p>Total Todos: {{total}}<p>
 
          <li ng-repeat="task in data">  
-            <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span>
+          <span ng-class="{true: 'active', false: 'inactive'}[isActive]" >id: {{task.id}} <a href=""  ng-click="deleteData(task.id)">task: {{task.task}}</a> <span>{{isActive}}</span></span>
         </li>
+        <span>{{isActive}}</span>
       <br/>
       <input type="text" ng-model='newTask' class="input"><br/>
         <button id="addbtn" ng-click="putData(newTask)">Add</button><br>
+      <br>
+      <php></php>
+        <button id="refreshbtn" ng-click="refreshData()">Refresh</button><br>
       <br>
   
    </div><!-- end DataCtrl -->
